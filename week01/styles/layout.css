@@ -24,7 +24,7 @@ nav {
 
 nav ul {
     list-style: none;
-    display: flex;
+    display: flex; /* Keep flex for navigation */
     justify-content: space-around;
     max-width: 1200px;
     margin: 0 auto;
@@ -37,7 +37,8 @@ nav a {
 
 /* Main content layout */
 .container {
-    display: flex;
+    display: grid; /* Changed to grid */
+    grid-template-columns: 3fr 1fr; /* Define grid columns */
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
@@ -45,14 +46,12 @@ nav a {
 }
 
 .main-content {
-    flex: 3;
     background-color: #ccc;
     min-height: 400px;
     padding: 20px;
 }
 
 .aside-content {
-    flex: 1;
     background-color: white;
     padding: 20px;
 }
@@ -69,11 +68,11 @@ nav a {
 /* Responsive design */
 @media (max-width: 768px) {
     .container {
-        flex-direction: column;
+        grid-template-columns: 1fr; /* Stack columns on small screens */
     }
     
     .main-content,
     .aside-content {
-        width: 100%;
+        width: 100%; /* This is not needed in grid, but kept for clarity */
     }
 }
