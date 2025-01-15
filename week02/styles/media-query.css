@@ -1,0 +1,36 @@
+    /* media-query css file */
+    body {
+        font-family: roboto;
+    }
+
+    header, main, footer {
+        max-width: 640px;
+        margin: 1rem auto;
+        border: 1px solid green;
+        padding: 1rem;
+        background-color: rgb(94, 135, 249);
+    }
+
+    main {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 1rem;
+    }
+
+    section {
+        padding: 10px;
+        background-color: aliceblue;
+    }
+
+    /* media-query-large css file */
+    @media screen and (min-width: 500px) {
+        header {
+            background-color: black;
+            color: #fff;
+        }
+    
+        main {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+    }
