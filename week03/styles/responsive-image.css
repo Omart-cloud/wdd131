@@ -1,0 +1,32 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+}
+
+.hero {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.hero img {
+    width: 100%; 
+    height: auto; 
+    display: block; 
+}
+
+picture {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+}
