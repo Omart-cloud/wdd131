@@ -1,9 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
     const currentYearSpan = document.getElementById("currentyear");
     const lastModifiedSpan = document.getElementById("lastModified");
-    const templeContainer = document.getElementById("temple-container");
+    const templeContainer = document.querySelector(".res-grid");
+
     
-    // Update current year
     if (currentYearSpan) {
         currentYearSpan.textContent = new Date().getFullYear();
     }
@@ -16,7 +16,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const temples = [
         { templeName: "Aba Nigeria", location: "Aba, Nigeria", dedicated: "2005-08-07", area: 11500, imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/aba-nigeria/400x250/aba-nigeria-temple-lds-273999-wallpaper.jpg" },
         { templeName: "Manti Utah", location: "Manti, Utah, USA", dedicated: "1888-05-21", area: 74792, imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/manti-utah/400x250/manti-temple-768192-wallpaper.jpg" },
-        { templeName: "Payson Utah", location: "Payson, Utah, USA", dedicated: "2015-06-07", area: 96630, imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/payson-utah/400x225/payson-utah-temple-exterior-1416671-wallpaper.jpg" }
+        { templeName: "Payson Utah", location: "Payson, Utah, USA", dedicated: "2015-06-07", area: 96630, imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/payson-utah/400x225/payson-utah-temple-exterior-1416671-wallpaper.jpg" },
+        { templeName: "San Diego California", location: "San Diego, CA, USA", dedicated: "1993-04-25", area: 72000, imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/san-diego/400x250/san-diego-temple-exterior-1.jpg" },
+        { templeName: "Tokyo Japan", location: "Tokyo, Japan", dedicated: "1980-10-27", area: 52000, imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/tokyo/400x250/tokyo-temple.jpg" },
+        { templeName: "Nauvoo Illinois", location: "Nauvoo, IL, USA", dedicated: "2002-06-27", area: 54000, imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/nauvoo/400x250/nauvoo-temple.jpg" }
     ];
 
     function displayTemples(filter) {
@@ -43,9 +46,9 @@ document.addEventListener("DOMContentLoaded", () => {
             card.classList.add("temple-card");
             card.innerHTML = `
                 <h2>${temple.templeName}</h2>
-                <p>Location: ${temple.location}</p>
-                <p>Dedicated: ${temple.dedicated}</p>
-                <p>Area: ${temple.area} sq ft</p>
+                <p><strong>Location:</strong> ${temple.location}</p>
+                <p><strong>Dedicated:</strong> ${temple.dedicated}</p>
+                <p><strong>Area:</strong> ${temple.area.toLocaleString()} sq ft</p>
                 <img src="${temple.imageUrl}" alt="${temple.templeName}" loading="lazy">
             `;
             templeContainer.appendChild(card);
