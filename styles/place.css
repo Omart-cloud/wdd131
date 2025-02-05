@@ -114,10 +114,10 @@ footer p {
 
 /* Mobile View: Show SVG Weather Icon */
 @media (max-width: 768px) {
-    .weather-icon {
-        display: block;
-        width: 50px;
-        height: 50px;
-        margin: auto;
+    .data-card, .weather-card {
+        position: static;
+        max-width: 100%;
+        margin: var(--spacing-unit) 0;
     }
 }
+
