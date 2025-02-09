@@ -7,14 +7,12 @@ body {
     text-align: center;
 }
 
-/* Header */
 header {
-    background-color: #222;
+    background-color: #24527a;
     color: white;
     padding: 20px;
 }
 
-/* Navigation */
 nav ul {
     list-style: none;
     padding: 0;
@@ -72,6 +70,33 @@ nav ul li a:hover {
 footer {
     margin-top: 20px;
     padding: 10px;
-    background-color: #222;
+    background-color: #24527a;
     color: white;
+}
+
+/* Hamburger Menu (Mobile) */
+.hamburger {
+    display: none;
+    background-color: #24527a;
+    color: white;
+    font-size: 30px;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav.show ul {
+        display: flex;
+    }
+
+    .hamburger {
+        display: inline-block;
+    }
 }

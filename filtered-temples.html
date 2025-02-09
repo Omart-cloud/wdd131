@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Temple Album</title>
     <meta name="description" content="Temple Album">
     <meta name="author" content="Mary Taiwo Omotoso">
     <link rel="stylesheet" href="styles/temples.css">
-    <link rel="stylesheet" href="styles/temples-large.css">
-    <script defer src="scripts/temples.js"></script>
+    <link rel="stylesheet" href="styles/filtered-temples.css">
+    <script defer src="scripts/filtered-temples.js"></script>
 </head>
 
 <body>
@@ -16,23 +16,24 @@
         <h1>Temple Album</h1>
         <nav>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Old</a></li>
-                <li><a href="#">New</a></li>
-                <li><a href="#">Large</a></li>
-                <li><a href="#">Small</a></li>
+                <li><a href="#" data-filter="home">Home</a></li>
+                <li><a href="#" data-filter="old">Old</a></li>
+                <li><a href="#" data-filter="new">New</a></li>
+                <li><a href="#" data-filter="large">Large</a></li>
+                <li><a href="#" data-filter="small">Small</a></li>
             </ul>
         </nav>
     </header>
+    
     <main>
         <h2>Home</h2>
-        <div class="res-grid">
-
+        <div class="res-grid" id="album">
+            <!-- Temple cards will be dynamically generated here -->
         </div>
-           
     </main>
+
     <footer>
-        <p>©<span id="currentyear"></span>Mary Taiwo Omotoso<span id="flower"></span> Nigeria</p>
+        <p>© <span id="currentYear"></span> Mary Taiwo Omotoso <span id="flower"></span> Nigeria</p>
         <p id="lastModified"></p>
     </footer>
 </body>
