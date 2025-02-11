@@ -1,0 +1,55 @@
+<!-- form.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Review Form</title>
+    <meta name="description" content="Review Form">
+    <meta name="author" content="Mary Taiwo Omotoso">
+    <link rel="stylesheet" href="styles/form.css">
+    <script src="scripts/form.js" defer></script>
+</head>
+<body>
+    <form method="get" action="review.html">
+        <label for="product">Product Name:</label>
+        <select id="product" name="product" required>
+            <option value="" disabled selected>Select a Product ...</option>
+        </select>
+        <label>Overall Rating:</label>
+        <div>
+            <input type="radio" id="star1" name="rating" value="1" required>
+            <label for="star1">1</label>
+            <input type="radio" id="star2" name="rating" value="2">
+            <label for="star2">2</label>
+            <input type="radio" id="star3" name="rating" value="3">
+            <label for="star3">3</label>
+            <input type="radio" id="star4" name="rating" value="4">
+            <label for="star4">4</label>
+            <input type="radio" id="star5" name="rating" value="5">
+            <label for="star5">5</label>
+        </div>
+        <label for="install-date">Date of Installation:</label>
+        <input type="date" id="install-date" name="install-date" required>
+        <label>Useful Features (Check all that apply):</label>
+        <div>
+            <input type="checkbox" id="feature1" name="features" value="durability">
+            <label for="feature1">Durability</label>
+            <input type="checkbox" id="feature2" name="features" value="ease-of-use">
+            <label for="feature2">Ease of Use</label>
+            <input type="checkbox" id="feature3" name="features" value="performance">
+            <label for="feature3">Performance</label>
+        </div>
+        <label for="review">Written Review (Optional):</label>
+        <textarea id="review" name="review"></textarea>
+        <label for="username">Your Name (Optional):</label>
+        <input type="text" id="username" name="username">
+        <input type="submit" value="Submit Review">
+    </form>
+    
+    <footer>
+        <p>&copy; <span id="currentyear"></span> Mary Taiwo Omotoso <span id="flower">🌸</span> Nigeria</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>

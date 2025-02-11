@@ -1,0 +1,13 @@
+<p>You have submitted <span id="counter">0</span> reviews.</p>
+
+<script>
+  // Retrieve counter from localStorage
+  let reviewCount = localStorage.getItem("reviewCount") || 0;
+  
+  // Increment and update localStorage
+  reviewCount++;
+  localStorage.setItem("reviewCount", reviewCount);
+  
+  // Display updated count
+  document.getElementById("counter").textContent = reviewCount;
+</script>
