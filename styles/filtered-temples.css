@@ -44,9 +44,25 @@ nav ul li a:hover {
 }
 
 /* Temple Card Styling */
+.temple-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+  }
+
+.temple-card h3 {
+    margin: 10px 0;
+}
+
+.temple-card p {
+    margin: 5px 0;
+}
+
 .temple-card {
     background: white;
     border-radius: 8px;
+    overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     padding: 15px;
     width: 300px;
@@ -56,6 +72,7 @@ nav ul li a:hover {
 .temple-card img {
     width: 100%;
     height: auto;
+    display: block;
     border-radius: 8px;
     opacity: 0;
     transition: opacity 1s ease-in-out;

@@ -15,6 +15,12 @@ hamburgerButton.addEventListener("click", () => {
     hamburgerButton.innerHTML = nav.classList.contains("show") ? "&#x2715;" : "&#9776;"; 
 });
 
+function validateImageUrl(url) {
+    if (!url.startsWith("http")) {
+        return `https://${url}`;     }
+        return url;
+}
+
 const temples = [
     {
         templeName: "Aba Nigeria",
